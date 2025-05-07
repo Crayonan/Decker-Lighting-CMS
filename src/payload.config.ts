@@ -13,7 +13,6 @@ import { Tags } from './collections/Tags'
 import { TeamMembers } from './collections/TeamMembers'
 import { ShopPackages } from './collections/ShopPackages'
 import { SiteTexts } from './globals/SiteTexts'
-import CustomLogo from './components/CustomLogo'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
