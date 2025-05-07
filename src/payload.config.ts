@@ -22,10 +22,20 @@ export default buildConfig({
     user: Users.slug,
     components: {
       graphics: {
-        Logo: path.resolve(dirname, 'components/CustomLogo.tsx'),
-        Icon: path.resolve(dirname, 'components/CustomIcon.tsx'),
+        Logo: '@/components/CustomLogo.tsx',
+        Icon: '@/components/CustomIcon.tsx',
       }
-    }
+    },
+    meta: {
+      titleSuffix: '- Admin',
+      icons: [
+        {
+          rel: 'icon',
+          type: 'image/ico',
+          url: '/favicon.ico',
+        },
+      ],
+    },
   },
   collections: [Users, Media, Photos, Tags, TeamMembers, ShopPackages],
   globals: [SiteTexts],

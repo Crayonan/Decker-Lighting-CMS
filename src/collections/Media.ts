@@ -50,7 +50,7 @@ export const Media: CollectionConfig = {
     {
       name: 'alt',
       type: 'text',
-      required: true,
+      required: false,
       label: 'Alt Text (Accessibility)',
       admin: {
         description: 'Describes the image for screen readers and SEO. Required.',

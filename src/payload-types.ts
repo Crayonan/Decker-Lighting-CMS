@@ -126,6 +126,8 @@ export interface UserAuthOperations {
   };
 }
 /**
+ * User accounts for the application.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "users".
  */
@@ -206,6 +208,8 @@ export interface Photo {
   createdAt: string;
 }
 /**
+ * Tags to categorize photos.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "tags".
  */
@@ -216,6 +220,8 @@ export interface Tag {
   createdAt: string;
 }
 /**
+ * Team members and their roles.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "team-members".
  */
@@ -246,6 +252,8 @@ export interface TeamMember {
   createdAt: string;
 }
 /**
+ * Packages available for purchase in the shop.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "shop-packages".
  */
@@ -493,6 +501,8 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   createdAt?: T;
 }
 /**
+ * Change the Shop and Team introduction texts.
+ *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "site-texts".
  */
