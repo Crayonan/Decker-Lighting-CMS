@@ -23,7 +23,9 @@
 .DS_Store
 *.pem
 .snapshots
-.vscode
+/.vscode
+.alpackages
+
 
 # debug
 npm-debug.log*

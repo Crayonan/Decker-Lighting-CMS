@@ -1,4 +1,3 @@
-// decker-lighting-cms/src/collections/TeamMembers.ts
 import type { CollectionConfig } from 'payload'
 
 export const TeamMembers: CollectionConfig = {
@@ -6,9 +5,10 @@ export const TeamMembers: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'role', 'email', 'updatedAt'],
+    description: 'Team members and their roles.',
   },
   access: {
-    read: () => true, // Publicly readable
+    read: () => true,
   },
   orderable: true,
   fields: [
@@ -24,7 +24,7 @@ export const TeamMembers: CollectionConfig = {
     },
     {
       name: 'bio',
-      type: 'richText', // Using richText for potentially formatted bios
+      type: 'richText',
     },
     {
       name: 'profilePicture',
@@ -35,10 +35,9 @@ export const TeamMembers: CollectionConfig = {
     },
     {
       name: 'specialties',
-      type: 'select', // Similar to Photos tags, consider a 'Tags' collection for more complex needs
+      type: 'select',
       hasMany: true,
       options: [
-        // Add predefined specialties
         { label: 'Lighting Design', value: 'lighting-design' },
         { label: 'Event Production', value: 'event-production' },
         { label: 'Photography Support', value: 'photography-support' },

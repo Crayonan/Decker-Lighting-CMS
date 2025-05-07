@@ -1,4 +1,3 @@
-// decker-lighting-cms/src/collections/ShopPackages.ts
 import type { CollectionConfig } from 'payload'
 
 export const ShopPackages: CollectionConfig = {
@@ -6,9 +5,10 @@ export const ShopPackages: CollectionConfig = {
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'price', 'updatedAt'],
+    description: 'Packages available for purchase in the shop.',
   },
   access: {
-    read: () => true, // Publicly readable
+    read: () => true,
   },
   orderable: true,
   fields: [
@@ -16,17 +16,14 @@ export const ShopPackages: CollectionConfig = {
       name: 'name',
       type: 'text',
       required: true,
-      localized: true, // Assuming package names might need translation
     },
     {
       name: 'description',
-      type: 'textarea', // Textarea for potentially longer descriptions
-      localized: true,
+      type: 'textarea',
     },
     {
       name: 'price',
-      type: 'text', // Using text for price to accommodate currencies/formatting e.g., "€199 / day"
-      // If it's always a number, 'number' type is also an option.
+      type: 'text',
       required: true,
     },
     {
@@ -39,13 +36,12 @@ export const ShopPackages: CollectionConfig = {
           name: 'feature',
           type: 'text',
           required: true,
-          localized: true,
         },
       ],
     },
     {
       name: 'whatsappLink',
-      type: 'text', // URL field type can also be used if you prefer stricter validation
+      type: 'text',
       label: 'WhatsApp Inquiry Link',
     },
   ],
