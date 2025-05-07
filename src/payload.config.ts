@@ -13,6 +13,7 @@ import { Tags } from './collections/Tags'
 import { TeamMembers } from './collections/TeamMembers'
 import { ShopPackages } from './collections/ShopPackages'
 import { SiteTexts } from './globals/SiteTexts'
+import CustomLogo from './components/CustomLogo'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -20,6 +21,12 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   admin: {
     user: Users.slug,
+    components: {
+      graphics: {
+        Logo: path.resolve(dirname, 'components/CustomLogo.tsx'),
+        Icon: path.resolve(dirname, 'components/CustomIcon.tsx'),
+      }
+    }
   },
   collections: [Users, Media, Photos, Tags, TeamMembers, ShopPackages],
   globals: [SiteTexts],
