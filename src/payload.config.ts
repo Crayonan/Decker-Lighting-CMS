@@ -80,5 +80,5 @@ export default buildConfig({
   },
   cors: [process.env.BACKEND_URL || '', process.env.FRONTEND_URL || ''],
 
-  csrf: [process.env.BACKEND_URL || ''],
+  csrf: [process.env.BACKEND_URL || '', process.env.FRONTEND_URL || ''],
 })
