@@ -13,6 +13,7 @@ import { Tags } from './collections/Tags'
 import { TeamMembers } from './collections/TeamMembers'
 import { ShopPackages } from './collections/ShopPackages'
 import { SiteTexts } from './globals/SiteTexts'
+import { formBuilderPlugin } from '@payloadcms/plugin-form-builder';
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -71,6 +72,21 @@ export default buildConfig({
       token: process.env.BLOB_READ_WRITE_TOKEN || '',
       addRandomSuffix: false,
       clientUploads: true,
+    }),
+    formBuilderPlugin({
+      fields: {
+        text: true, 
+        email: true, 
+        textarea: true, 
+        select: true, 
+        checkbox: true, 
+        country: true,
+        number: true,
+        state: true,
+        message: true, 
+        payment: false, 
+      },
+      defaultToEmail: process.env.FORM_EMAIL || '',
     }),
   ],
   upload: {
